@@ -1,17 +1,18 @@
 #!/usr/bin/python3
-""" 0. Read file """
+"""
+Module 0-read_file.
+Read from a file and prints
+"""
 
 
 def read_file(filename=""):
-    """ Creating a function that reads a text file and
-    prints to stdout.
-    Note:
-        The with statement opens, reads and closes a file
-    Args:
-        filename: name of text file
     """
-    text_content = ""
-    with open(filename) as file_obj:
-        for text_line in file_obj.readlines():
-            text_content += text_line
-        print("{}".format(text_content), end="")
+    Reads from filename and prints
+    its contents to stdout.
+    Args:
+     - filename: name of the file
+    """
+
+    with open(filename) as f:
+        read_text = f.read()
+        print(read_text, end="")
